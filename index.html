@@ -127,6 +127,11 @@
     padding: 110px 0 90px;
     overflow: hidden;
     border-bottom: 1px solid var(--line);
+    background-image:
+      linear-gradient(105deg, rgba(20, 16, 12, 0.97) 0%, rgba(20, 16, 12, 0.88) 42%, rgba(20, 16, 12, 0.55) 100%),
+      url("photos/hero-sclass.jpg");
+    background-size: cover;
+    background-position: center right;
   }
   /* light streak across dark paint */
   .hero::before {
@@ -301,6 +306,8 @@
     border-radius: 2px;
     background:
       linear-gradient(160deg, #241d15 0%, #171310 45%, #0f0c09 100%);
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
   }
   .photo::before {
@@ -309,6 +316,10 @@
     inset: 0;
     background: linear-gradient(115deg, transparent 38%, rgba(223, 192, 138, 0.16) 47%, rgba(241, 234, 220, 0.1) 50%, transparent 62%);
   }
+  .photo.shot::before {
+    background: linear-gradient(180deg, rgba(10, 8, 6, 0.08) 0%, transparent 45%, rgba(10, 8, 6, 0.55) 100%);
+  }
+  .workgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .photo .cap {
     position: absolute;
     left: 14px;
@@ -458,7 +469,7 @@
     .svc-grid, .steps { grid-template-columns: 1fr; }
     .proof-grid { grid-template-columns: 1fr; }
     .proof-cell + .proof-cell { border-left: none; border-top: 1px solid var(--line); }
-    .exotic-grid, .collection-inner, .founder-grid, .quotes { grid-template-columns: 1fr; }
+    .exotic-grid, .collection-inner, .founder-grid, .quotes, .workgrid { grid-template-columns: 1fr; }
     .hero { padding: 72px 0 64px; }
     section.block { padding: 64px 0; }
   }
@@ -549,6 +560,23 @@
   </div>
 </section>
 
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Recent work</p>
+      <h2>The finish speaks for itself.</h2>
+    </div>
+    <div class="workgrid">
+      <div class="photo wide shot" style="background-image: url('photos/work-sl.jpg');" role="img" aria-label="A client's red Mercedes SL, freshly detailed, in the sun">
+        <span class="cap">A client's Mercedes SL</span>
+      </div>
+      <div class="photo wide shot" style="background-image: url('photos/work-gloss.jpg');" role="img" aria-label="Clouds reflected sharply in freshly coated paint">
+        <span class="cap">Ceramic gloss · clouds in the paint</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="block" id="exotics">
   <div class="wrap">
     <div class="exotic-grid">
@@ -567,8 +595,8 @@
           <span>Ferrari</span><span>Lamborghini</span><span>Maybach</span><span>Rolls-Royce</span><span>Porsche</span><span>Bentley</span>
         </div>
       </div>
-      <div class="photo tall">
-        <span class="cap">Photo · a client's car under studio light</span>
+      <div class="photo tall shot" style="background-image: url('photos/exotic-porsche.jpg');" role="img" aria-label="Front of a client's white Porsche after detailing">
+        <span class="cap">A client's Porsche</span>
       </div>
     </div>
   </div>
@@ -577,8 +605,8 @@
 <section class="block collection" id="collection">
   <div class="wrap">
     <div class="collection-inner">
-      <div class="photo portrait">
-        <span class="cap">Photo · estate garage, full collection</span>
+      <div class="photo portrait shot" style="background-image: url('photos/collection-cayenne.jpg');" role="img" aria-label="A client's Porsche Cayenne with doors open during an interior detail at the shop">
+        <span class="cap">Interior day · a client's Cayenne</span>
       </div>
       <div>
         <p class="eyebrow">Collection Care</p>
@@ -599,9 +627,8 @@
 <section class="block" id="founder">
   <div class="wrap">
     <div class="founder-grid">
-      <div class="video-frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/z954q-_rDZk" title="Mark from Wax On Wax Off on ceramic coating" loading="lazy" allowfullscreen></iframe>
-        <span class="cap">Mark on ceramic coating · to be replaced with the original file</span>
+      <div class="photo portrait shot" style="background-image: url('photos/mark.jpg'); background-position: center 30%;" role="img" aria-label="Mark Shaw smiling in the doorway of a client's BMW, his tool wall behind him">
+        <span class="cap">Mark Shaw</span>
       </div>
       <div>
         <p class="eyebrow">About</p>
@@ -611,6 +638,10 @@
           <footer style="font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--champagne); margin-top: 14px;">Mark Shaw · Founder</footer>
         </blockquote>
       </div>
+    </div>
+    <div class="video-frame" style="margin-top: 44px;">
+      <iframe src="https://www.youtube-nocookie.com/embed/z954q-_rDZk" title="Mark from Wax On Wax Off on ceramic coating" loading="lazy" allowfullscreen></iframe>
+      <span class="cap">Mark on ceramic coating · to be replaced with the original file</span>
     </div>
   </div>
 </section>
@@ -676,7 +707,7 @@
     <p class="eyebrow">Notes on this draft</p>
     <h2>What is placeholder, what is decided, what I need from you.</h2>
     <ol>
-      <li><strong>Photos are the whole game.</strong> Every gradient block above is a stand-in for a real photo of a real client car. One good evening shoot of 3 or 4 client cars (with permission) beats any stock image. The founder portrait matters most.</li>
+      <li><strong>First real photos are in:</strong> Mark, the S-Class hero, the SL, the ceramic gloss, the Porsche, and the Cayenne. Still wanted: one true exotic (Ferrari, Lamborghini, or the Maybach), an estate garage shot for Collection Care, and any before-and-after pairs.</li>
       <li><strong>Review count is fake.</strong> The "[XX] reviews" stat needs the real Google Business number. If reviews are thin, collecting 20 to 30 from the existing client list is a week-one project.</li>
       <li><strong>Founder story still needed.</strong> Mark Shaw is in. Next: one short paragraph of his history and the 1996 origin story, told his way.</li>
       <li><strong>Prices are proposals from market research.</strong> Maintenance from $95, Signature from $495, Correction and Ceramic from $1,500. Local full details run $225 to $390 and coatings run $999 to $2,100, so these sit deliberately at the top of the market. Confirm with your dad before anything goes live.</li>
