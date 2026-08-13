@@ -225,7 +225,7 @@
   .section-head p { color: var(--muted); max-width: 54ch; font-size: 1.02rem; }
 
   /* ---------- services ---------- */
-  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
   .svc {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -566,22 +566,29 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Services</p>
-      <h2>Three services. Clear prices. Booked in under a minute.</h2>
-      <p>No menus of add-ons, no surcharges hidden in fine print. Choose the level of care, pick a time, and we confirm by text.</p>
+      <h2>Four services. Clear prices. Booked in under a minute.</h2>
+      <p>No menus of add-ons, no surcharges hidden in fine print. Two simple sizes: small cars, and large cars like SUVs and trucks. Choose the level of care, pick a time, and we confirm by text.</p>
     </div>
     <div class="svc-grid">
       <article class="svc">
         <h3>The Maintenance Wash</h3>
         <p class="meta">About 1 hour · reserved for our clients</p>
-        <p class="price">from $95 <em>per visit</em></p>
+        <p class="price">$95 / $115 <em>small / large</em></p>
         <p class="desc">A one hundred percent hand wash, reserved for cars already in our care after a detail or coating. Standing schedules keep every car ready to drive.</p>
+        <a class="btn btn-ghost btn-small" href="#book">Book online</a>
+      </article>
+      <article class="svc">
+        <h3>The Wash &amp; Wax</h3>
+        <p class="meta">About 2 hours · exterior</p>
+        <p class="price">$200 / $250 <em>small / large</em></p>
+        <p class="desc">The full hand wash plus a hand-applied wax that brings back depth and protection between details.</p>
         <a class="btn btn-ghost btn-small" href="#book">Book online</a>
       </article>
       <article class="svc">
         <span class="tag">Most requested</span>
         <h3>The Signature Detail</h3>
         <p class="meta">Half a day · interior and exterior</p>
-        <p class="price">from $495</p>
+        <p class="price">$495 / $595 <em>small / large</em></p>
         <p class="desc">The full treatment we have refined since 1996. Paint hand washed, decontaminated, and waxed. Every interior surface cleaned and conditioned.</p>
         <a class="btn btn-gold btn-small" href="#book">Book online</a>
       </article>
@@ -594,7 +601,7 @@
         <a class="btn btn-ghost btn-small" href="#book">Request a consultation</a>
       </article>
     </div>
-    <p style="color: var(--muted); font-size: 0.9rem; max-width: 62ch; margin-top: 26px;">Every coating carries a written warranty. An annual inspection, from $250, keeps the warranty active: decontamination wash, coating assessment, and a booster application, logged against your car.</p>
+    <p style="color: var(--muted); font-size: 0.9rem; max-width: 62ch; margin-top: 26px;">Every coating carries a written warranty. An annual inspection, $250 small or $300 large, keeps the warranty active: decontamination wash, coating assessment, and a booster application, logged against your car.</p>
   </div>
 </section>
 
@@ -731,7 +738,7 @@
       </details>
       <details>
         <summary>How long does a coating last?</summary>
-        <p>Warrantied options run from multi-year to nearly a decade of coverage. A brief annual inspection keeps the warranty active: we wash, decontaminate, assess the coating, and apply a booster, from $250.</p>
+        <p>Warrantied options run from multi-year to nearly a decade of coverage. A brief annual inspection keeps the warranty active: we wash, decontaminate, assess the coating, and apply a booster. $250 for small cars, $300 for large.</p>
       </details>
       <details>
         <summary>Do you work on matte paint, carbon, and Alcantara?</summary>
@@ -764,7 +771,7 @@
     <div class="steps">
       <div class="step">
         <h3>Choose a service</h3>
-        <p>Three options, clear prices, no add-on maze.</p>
+        <p>Four options, clear prices, no add-on maze.</p>
       </div>
       <div class="step">
         <h3>Pick a time</h3>
@@ -785,6 +792,7 @@
     <div>
       <div class="fm">WAX ON WAX OFF AUTO SPA</div>
       <div>Rancho Santa Fe, California · Since 1996</div>
+      <div style="margin-top: 6px;">Monday to Saturday · 7am to 4pm</div>
     </div>
     <div>
       <div><a href="tel:7605353509">760-535-3509</a></div>
@@ -803,8 +811,8 @@
       <li><strong>Yelp is real and live on this page:</strong> 5.0 across 12 reviews. Next moves: claim the unclaimed Yelp listing (Mark or Takashi must do it at biz.yelp.com), fix its outdated address and hours, get written OK from featured reviewers, and start the Google review push with the same client list.</li>
       <li><strong>Confirm the shop's current location.</strong> Yelp reviewers say the map address is old and the shop moved behind the Rancho Santa Fe Inn tennis courts around 2015. The footer needs the real current address before launch.</li>
       <li><strong>Founder story still needed.</strong> Mark Shaw is in. Next: one short paragraph of his history and the 1996 origin story, told his way.</li>
-      <li><strong>Prices are proposals from market research.</strong> Maintenance from $95, Signature from $495, Correction and Ceramic now from $2,500 (raised from $1,500 after the August business plan research: Ceramic Pro's minimum retail is $2,500, luxury tickets run $3,000 to $5,000, and an underpriced coating reads as a red flag in this market). Confirm with your dad before anything goes live.</li>
-      <li><strong>New in this revision (August 13):</strong> ceramic repriced and tagged as the specialty, Maintenance Wash marked clients-only, the annual coating inspection introduced, a ten-question FAQ section added (it feeds Google's AI answers as well as visitors), and the discretion promise ("we never post your car") added to Exotics and Collection Care.</li>
+      <li><strong>Pricing is SIGNED OFF by Takashi (August 13) as launch test pricing.</strong> Small / large split: Maintenance Wash $95/$115, Wash and Wax $200/$250, Signature Detail $495/$595, Correction and Ceramic from $2,500, Annual Inspection $250/$300. Mark felt the numbers were high, but he has been underpricing ($300-350 full details, $50 washes) and the market research supports these. Watch early bookings: if people decline on price alone, readjust fast.</li>
+      <li><strong>New in this revision (August 13):</strong> ceramic repriced and tagged as the specialty, the Wash and Wax tier added, small/large pricing across the menu, hours set Monday to Saturday 7am to 4pm, Maintenance Wash marked clients-only, the annual coating inspection introduced, a ten-question FAQ section (it feeds Google's AI answers as well as visitors), and the discretion promise ("we never post your car") in Exotics and Collection Care.</li>
       <li><strong>Collection Care is the new offer.</strong> It packages what he likely already does for estate clients into a recurring membership. Naming and pricing to workshop.</li>
       <li><strong>Booking buttons are wired to placeholders.</strong> On the real site every gold button opens the Wix Bookings calendar with these three services, sizes as options.</li>
       <li><strong>The About video is a YouTube embed for now.</strong> Swap in the original file (uploaded to Wix) when Takashi tracks it down. Note it will not play inside the private artifact viewer, only on the public preview link.</li>
